@@ -1,0 +1,85 @@
+<html>
+
+<head>
+    <title>하버드 평생주소</title>
+    <style>
+        html{
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            -webkit-tap-highlight-color: rgba(0,0,0,0);
+        }
+        body {
+            margin: 0px;
+            padding: 0px;
+            position: relative;
+            background-color: #141414;
+        }
+
+        img {
+            width: 100%;
+            vertical-align: top;
+        }
+
+
+
+        /* PC 화면에서만 보이도록 스타일링 */
+        .pc-image {
+            display: block;
+        }
+
+        /* 모바일 화면에서만 보이도록 스타일링 */
+        .mobile-image {
+            display: none;
+        }
+
+        /* 모바일 화면에 대한 미디어 쿼리 */
+        @media only screen and (max-width: 1000px) {
+            .pc-image {
+                display: none;
+            }
+
+            .mobile-image {
+                display: block;
+            }
+        }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/jquery.rwdImageMaps.min.js"></script>
+    <script src="./js/ios-orientationchange-fix.min.js"></script>
+    
+    
+
+
+</head>
+
+<body>
+    <img class="pc-image" src="./img/havard.png" usemap="#image-map1">
+
+    <map name="image-map1">
+        <area target="" alt="1" title="1" href="http://hv-3939.com" coords="735,973,1186,1040" shape="rect">
+        <area target="" alt="2" title="2" href="http://hv-7979.com" coords="732,1053,1183,1120" shape="rect">
+        <area target="" alt="3" title="3" href="http://하버드바로가기.com" coords="729,1296,1181,1366" shape="rect">
+        <area target="" alt="4" title="4" href="https://t.me/hvd115" coords="790,1469,1122,1525" shape="rect">
+    </map>
+
+    <img class="mobile-image" src="./img/harvard mb.png" usemap="#image-map2">
+
+    <map name="image-map2">
+        <area target="" alt="1" title="1" href="http://hv-3939.com" coords="137,1304,760,1395" shape="rect">
+        <area target="" alt="2" title="2" href="http://hv-7979.com" coords="133,1416,757,1506" shape="rect">
+        <area target="" alt="3" title="3" href="http://하버드바로가기.com" coords="131,1753,754,1842" shape="rect">
+        <area target="" alt="4" title="4" href="https://t.me/hvd115" coords="216,1989,675,2066" shape="rect">
+    </map>
+
+    <script src="chrome-extension://hhojmcideegachlhfgfdhailpfhgknjm/web_accessible_resources/index.js"></script>
+    <script>
+        (function ($) {
+            $(document).ready(function (e) {
+                $('.pc-image').rwdImageMaps();
+                $('.mobile-image').rwdImageMaps();
+            });
+        })(jQuery);
+    </script>
+</body>
+
+</html>
